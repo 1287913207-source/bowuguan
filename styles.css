@@ -294,7 +294,7 @@ body::before {
   overflow: hidden;
   background:
     linear-gradient(160deg, rgba(12, 18, 24, 0.8), rgba(18, 28, 18, 0.72)),
-    url("./images/keyword-bg.png") center 30% / cover no-repeat;
+    url("./images/keyword-bg.png?v=20260325-2049") center 30% / cover no-repeat;
   color: #f8f1e8;
 }
 
