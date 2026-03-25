@@ -290,12 +290,30 @@ body::before {
 }
 
 .intro-panel.alt {
-  background: linear-gradient(160deg, rgba(33, 66, 93, 0.94), rgba(86, 100, 71, 0.92));
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(160deg, rgba(12, 18, 24, 0.8), rgba(18, 28, 18, 0.72)),
+    url("./images/keyword-bg.png") center 30% / cover no-repeat;
   color: #f8f1e8;
 }
 
 .intro-panel.alt p {
   color: rgba(248, 241, 232, 0.9);
+}
+
+.intro-panel.alt > * {
+  position: relative;
+  z-index: 1;
+}
+
+.intro-panel.alt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(4, 6, 8, 0.28), rgba(4, 6, 8, 0.64)),
+    radial-gradient(circle at top right, rgba(255, 120, 180, 0.08), transparent 28%);
 }
 
 .keywords {
@@ -309,8 +327,10 @@ body::before {
 
 .keywords li {
   padding: 0.65rem 0.9rem;
-  border: 1px solid rgba(248, 241, 232, 0.18);
+  border: 1px solid rgba(248, 241, 232, 0.24);
   border-radius: 999px;
+  background: rgba(8, 12, 14, 0.4);
+  backdrop-filter: blur(8px);
 }
 
 .card-grid {
