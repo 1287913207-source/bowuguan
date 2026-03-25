@@ -144,6 +144,38 @@ body::before {
   padding: 5rem 0 3rem;
 }
 
+.hero-side {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-visual,
+.feature-image {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.hero-visual {
+  min-height: 21rem;
+  background: rgba(255, 249, 241, 0.7);
+}
+
+.hero-visual img,
+.feature-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-visual img {
+  max-height: 24rem;
+  object-position: center 18%;
+}
+
 .eyebrow,
 .section-tag,
 .card-label,
@@ -351,6 +383,33 @@ body::before {
   justify-content: space-between;
 }
 
+.info-image {
+  min-height: 11rem;
+  margin-bottom: 1rem;
+  border-radius: 18px;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid rgba(33, 25, 19, 0.14);
+}
+
+.ceramic-image {
+  background-image:
+    linear-gradient(180deg, rgba(12, 12, 12, 0.08), rgba(12, 12, 12, 0.16)),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Ming_Jingdezhen_Porcelain,_c._1450.jpg");
+}
+
+.textile-image {
+  background-image:
+    linear-gradient(180deg, rgba(12, 12, 12, 0.04), rgba(12, 12, 12, 0.12)),
+    url("./images/embroidery.jpg");
+}
+
+.wood-image {
+  background-image:
+    linear-gradient(180deg, rgba(12, 12, 12, 0.08), rgba(12, 12, 12, 0.24)),
+    url("./images/wood-carving.jpg");
+}
+
 .accent-terracotta {
   background: linear-gradient(180deg, rgba(182, 91, 58, 0.14), rgba(255, 249, 241, 0.82));
 }
@@ -431,6 +490,15 @@ body::before {
     radial-gradient(circle at top left, rgba(185, 139, 67, 0.24), transparent 30%),
     radial-gradient(circle at bottom right, rgba(182, 91, 58, 0.16), transparent 24%),
     var(--bg-elevated);
+}
+
+.feature-image {
+  margin-bottom: 1.15rem;
+  height: 15rem;
+}
+
+.feature-image img {
+  object-position: center;
 }
 
 .artifact-list {
@@ -587,6 +655,10 @@ select {
 
   .hero-card {
     transform: none;
+  }
+
+  .hero-visual img {
+    max-height: 18rem;
   }
 
   .ticket-form {
